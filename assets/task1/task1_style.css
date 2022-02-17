@@ -1,6 +1,7 @@
 body {
     max-width: 1000px;
     margin: auto;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .task_wrapper {
