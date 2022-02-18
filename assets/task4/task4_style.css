@@ -1,0 +1,53 @@
+.task4_circle {
+    background-color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.task4_circle:hover {
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.task4_circleWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.task4_pencils {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.task4_pencil {
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.task4_pencil:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s;
+}
+
+.task4_pencilSelect {
+    transform: scale(1.2);
+}
+
+.task4_pencilImg {
+    height: 100%;
+}
+
+.task4_checkTask {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task4_chek_answer {
+    font-size: 26px;
+}
