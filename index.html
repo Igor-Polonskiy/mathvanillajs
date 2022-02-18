@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="./assets/task2/task2_style.css">
     <link rel="stylesheet" href="./assets/task3/task3_style.css">
     <link rel="stylesheet" href="./assets/task4/task4_style.css">
-
+    <link rel="stylesheet" href="./assets/task5/task5_style.css">
 </head>
 
 <body>
-    <div class="task1_wrapper task_wrapper">
+    <a name="task1"></a>
+    <div class="task1_wrapper task_wrapper" id="task1">
         <div class="task1_imgWrapper">
             <img src="assets/task1/img/toys.png" alt="toys" />
         </div>
@@ -28,7 +29,8 @@
         </div>
     </div>
 
-    <div class="task2_wrapper task_wrapper">
+    <a name="task2"></a>
+    <div class="task2_wrapper task_wrapper" id="task1">
         <div class="task2_begin">НАЧАТЬ</div>
         <div class="task2_sliderWrapper">
             <div class="task2_counting">Изображение <span class="task2_count1"></span> из <span class="task2_count2"></span></div>
@@ -104,7 +106,8 @@
         </audio>
     </div>
 
-    <div class="task3_wrapper task_wrapper">
+    <a name="task3"></a>
+    <div class="task3_wrapper task_wrapper" id="task1">
         <div class="task3_imgWrapper">
             <img src="assets/task3/img/task3-1.png" alt="fishes" />
         </div>
@@ -120,7 +123,8 @@
         </div>
     </div>
 
-    <div class="task4_wrapper task_wrapper">
+    <a name="task4"></a>
+    <div class="task4_wrapper task_wrapper" id="task1">
         <div class="task4_circleWrapper">
             <div class="task4_circle"></div>
             <div class="task4_circle"></div>
@@ -143,7 +147,24 @@
             <div class="task4_chek_answer"></div>
             <button class="task4_checkingTask task1Btn">проверить</button>
         </div>
+    </div>
 
+    <a name="task5"></a>
+    <div class="task5_wrapper task_wrapper">
+        <div class="task5_imgWrapper">
+            <img src="assets/task5/img/animals.png" alt="animals" />
+        </div>
+        <div class="task5_answer">
+            <label>Сколько слонов на рисунке? Напиши ответ: <input type="number" id='elephants'></label>
+            <label>Сколько фламинго на рисунке? Напиши ответ: <input type="number" id='flamingos'></label>
+            <label>Сколько ног у носорога? Напиши ответ: <input type="number" id='legs'></label>
+
+        </div>
+        <div class="task5_checkTask">
+            <button class="task5_reloadTask task1Btn">сброс &#8635; </button>
+            <div class="task5_chek_answer"></div>
+            <button class="task5_checkingTask task1Btn">проверить</button>
+        </div>
     </div>
 
 
@@ -151,7 +172,7 @@
     <script src="./assets/task2/task2_script.js"></script>
     <script src="./assets/task3/task3_script.js"></script>
     <script src="./assets/task4/task4_script.js"></script>
-
+    <script src="./assets/task5/task5_script.js"></script>
 </body>
 
 </html>
