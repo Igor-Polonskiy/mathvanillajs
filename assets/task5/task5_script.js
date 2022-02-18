@@ -7,13 +7,9 @@
     const inputFlamingo = document.querySelector('#flamingos')
     const inputLegs = document.querySelector('#legs')
 
-    const winVarTask3 = '8'
-
     let answer1 = 0
     let answer2 = 0
     let answer3 = 0
-
-
 
     inputElephant.addEventListener('change', (e) => {
         answer1 = e.target.value
