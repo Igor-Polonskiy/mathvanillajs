@@ -1,0 +1,59 @@
+.task7_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.task7_imgWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.task7_imgWrapper_img {
+    width: 24%;
+    height: 250px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.task7_answers {
+    margin-top: 20px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.task7_answer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #0AB7D3;
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: aliceblue;
+}
+
+.task7_checkTask {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.task7_chek_answer {
+    font-size: 26px;
+}
