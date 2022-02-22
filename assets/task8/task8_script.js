@@ -1,64 +1,89 @@
 (() => {
-    const reloadTaskBtn = document.querySelector('.task7_reloadTask')
-    const checkingTaskBtn = document.querySelector('.task7_checkingTask')
-    const checkTask = document.querySelector('.task7_checkTask')
-    const chek_answerTxt = document.querySelector('.task7_chek_answer')
-    const picturesWrapper = document.querySelector('.task7_imgWrapper')
-    const answersWrapper = document.querySelector('.task7_answers')
+    const reloadTaskBtn = document.querySelector('.task8_reloadTask')
+    const checkingTaskBtn = document.querySelector('.task8_checkingTask')
+    const checkTask = document.querySelector('.task8_checkTask')
+    const chek_answerTxt = document.querySelector('.task8_chek_answer')
+    const picturesWrapper = document.querySelector('.task8_imgWrapper')
+    const answersWrapper = document.querySelector('.task8_answers')
+
+    const boxes = [{
+            id: 1,
+            src: './assets/task8/img/boxes1.jpg',
+            data: 1
+        },
+        {
+            id: 2,
+            src: './assets/task8/img/boxes2.jpg',
+            data: 2
+        },
+        {
+            id: 3,
+            src: './assets/task8/img/boxes3.jpg',
+            data: 3
+        },
+        {
+            id: 4,
+            src: './assets/task8/img/boxes4.jpg',
+            data: 4
+        },
+        {
+            id: 5,
+            src: './assets/task8/img/boxes5.jpg',
+            data: 5
+        },
+        {
+            id: 6,
+            src: './assets/task8/img/boxes6.jpg',
+            data: 6
+        }
+    ]
 
     const pictures = [{
             id: 1,
-            src: './assets/task7/img/task7_1.png',
-            data: 10
+            src: './assets/task8/img/task8-1.jpg',
+            data: 3
         },
         {
             id: 2,
-            src: './assets/task7/img/task7_2.png',
-            data: 8
+            src: './assets/task8/img/task8-2.jpg',
+            data: 4
         },
         {
             id: 3,
-            src: './assets/task7/img/task7_3.png',
-            data: 7
+            src: './assets/task8/img/task8-3.jpg',
+            data: 2
         },
         {
             id: 4,
-            src: './assets/task7/img/task7_4.png',
-            data: 8
-        }
-    ]
-
-    const answers = [{
-            id: 1,
-            data: '10'
+            src: './assets/task8/img/task8-4.jpg',
+            data: 1
         },
         {
-            id: 2,
-            data: '8'
+            id: 5,
+            src: './assets/task8/img/task8-5.jpg',
+            data: 6
         },
         {
-            id: 3,
-            data: '8'
-        },
-        {
-            id: 4,
-            data: '7'
+            id: 6,
+            src: './assets/task8/img/task8-6.jpg',
+            data: 5
         }
     ]
 
 
-    pictures.forEach(item => {
+
+    boxes.forEach(item => {
         let picture = document.createElement('div')
-        picture.classList.add('task7_imgWrapper_img')
+        picture.classList.add('task8_imgWrapper_img')
         picture.style.backgroundImage = `url(${item.src})`
         picture.setAttribute('data-number', item.data)
         picturesWrapper.append(picture)
     })
 
-    answers.sort(() => Math.random() - 0.5).forEach(item => {
+    pictures.sort(() => Math.random() - 0.5).forEach(item => {
         let answer = document.createElement('div')
-        answer.classList.add('task7_answer')
-        answer.innerText = item.data
+        answer.classList.add('task8_answer')
+        answer.style.backgroundImage = `url(${item.src})`
         answer.setAttribute('data-number', item.data)
         answersWrapper.append(answer)
     })
@@ -74,7 +99,7 @@
     }
 
     answersWrapper.addEventListener('mousedown', (e) => {
-        if (e.target.classList.contains('task7_answer')) {
+        if (e.target.classList.contains('task8_answer')) {
             chek_answerTxt.innerHTML = ''
             checkTask.style.background = ''
 
@@ -108,7 +133,7 @@
             draggingItem.style.visibility = 'visible';
             draggingItem.style.cursor = "grab";
 
-            if (elemBelow.classList.contains("task7_imgWrapper_img") && elemBelow.childNodes.length === 0) {
+            if (elemBelow.classList.contains("task8_imgWrapper_img") && elemBelow.childNodes.length === 0) {
                 draggingItem.style.position = "static";
                 draggingItem.style.zIndex = null;
                 draggingItem.style.top = null;
@@ -136,10 +161,10 @@
         for (let i = (answersWrapper.childNodes.length - 1); i > 0; i--) {
             answersWrapper.childNodes[i].remove()
         }
-        answers.sort(() => Math.random() - 0.5).forEach(item => {
+        pictures.sort(() => Math.random() - 0.5).forEach(item => {
             let answer = document.createElement('div')
-            answer.classList.add('task7_answer')
-            answer.innerText = item.data
+            answer.classList.add('task8_answer')
+            answer.style.backgroundImage = `url(${item.src})`
             answer.setAttribute('data-number', item.data)
             answersWrapper.append(answer)
         })
@@ -160,7 +185,7 @@
 
 
 
-        if (winVar === 4) {
+        if (winVar === 6) {
             chek_answerTxt.innerHTML = '<span>&#128077;</span> Молодец!'
             checkTask.style.background = 'lightgreen'
         } else {
