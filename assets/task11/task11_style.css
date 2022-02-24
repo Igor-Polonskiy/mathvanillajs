@@ -1,0 +1,77 @@
+.task11_wrapper {
+    max-width: 1000px;
+}
+
+.task11_imgWrapper {
+    width: 100%;
+}
+
+.task11_line1,
+.task11_line2 {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.task11_letter {
+    font-size: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: -5px -5px 15px #ffffff, 5px 5px 10px #cbcdd3;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.task11_letter_active {
+    background-color: blue;
+    color: white;
+}
+
+.task11_answers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task11_answer {
+    box-sizing: border-box;
+    font-size: 32px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid grey;
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #e9ecf4;
+}
+
+.task11_answer:hover {
+    box-shadow: -5px -5px 15px #b8b7b7, 5px 5px 15px #99999b;
+}
+
+.task11_answer_active {
+    border: 8px solid blue
+}
+
+.task11_checkTask {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task11_chek_answer {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+}
+
+.task11_chek_answer span {
+    font-size: 25px;
+}
