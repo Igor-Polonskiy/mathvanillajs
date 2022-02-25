@@ -7,11 +7,15 @@
 .task13_imgWrapper {
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #cbcdd3;
+    border-radius: 10px;
 }
 
 .task13_imgWrapper img {
-    height: 300px;
+    width: 90%;
 }
 
 .task13_drop {
@@ -44,18 +48,13 @@
 
 .task13_answer {
     box-sizing: border-box;
-    font-size: 32px;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 15px;
     width: 70px;
     height: 70px;
     border-radius: 12px;
     cursor: grab;
-    background-color: antiquewhite;
-    box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #cbcdd3;
+    background-position: top;
+    background-size: contain;
 }
 
 .task13_checkTask {

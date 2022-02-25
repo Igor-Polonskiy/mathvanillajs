@@ -9,7 +9,7 @@
 
     const dropitems = [{
             id: 1,
-            data: '1'
+            data: '1',
         },
         {
             id: 2,
@@ -38,40 +38,57 @@
         {
             id: 8,
             data: '8'
-        },
-        {
-            id: 9,
-            data: '9'
         }
     ]
 
     const answers = [{
             id: 1,
-            data: '1'
+            data: '1',
+            src: './assets/task13/img/task13_10.png'
         },
         {
             id: 2,
-            data: '2'
+            data: '2',
+            src: './assets/task13/img/task13_9.png'
         },
         {
             id: 3,
-            data: '4'
+            data: '3',
+            src: './assets/task13/img/task13_8.png'
+
         },
         {
             id: 4,
-            data: '5'
+            data: '4',
+            src: './assets/task13/img/task13_7.png'
+
         },
         {
             id: 5,
-            data: '6'
+            data: '5',
+            src: './assets/task13/img/task13_6.png'
+
         },
         {
             id: 6,
-            data: '7'
+            data: 'no',
+            src: './assets/task13/img/task13_5.png'
+
         },
         {
             id: 7,
-            data: '9'
+            data: '6',
+            src: './assets/task13/img/task13_4.png'
+        },
+        {
+            id: 8,
+            data: '7',
+            src: './assets/task13/img/task13_3.png'
+        },
+        {
+            id: 9,
+            data: '8',
+            src: './assets/task13/img/task13_2.png'
         }
     ]
 
@@ -82,12 +99,11 @@
         dropZone.append(el)
     })
 
-
     answers.sort(() => Math.random() - 0.5).forEach(item => {
         let answer = document.createElement('div')
         answer.classList.add('task13_answer')
-        answer.innerText = item.data
         answer.setAttribute('data-number', item.data)
+        answer.style.backgroundImage = `url(${item.src})`
         answersWrapper.append(answer)
     })
 
@@ -169,8 +185,8 @@
         answers.sort(() => Math.random() - 0.5).forEach(item => {
             let answer = document.createElement('div')
             answer.classList.add('task13_answer')
-            answer.innerText = item.data
             answer.setAttribute('data-number', item.data)
+            answer.style.backgroundImage = `url(${item.src})`
             answersWrapper.append(answer)
         })
 
@@ -181,30 +197,15 @@
     checkingTaskBtn.addEventListener('click', () => {
         let winVar = 0
 
-        for (let i = 0; i < 2; i++) {
-            if (dropeitems[i].childNodes.length) {
-                if (dropeitems[i].childNodes[0].getAttribute('data-number') === dropeitems[i].getAttribute('data-number')) {
+        dropeitems.forEach(item => {
+            if (item.childNodes.length) {
+                if (item.childNodes[0].getAttribute('data-number') === item.getAttribute('data-number')) {
                     winVar++
                 }
             }
-        }
+        })
 
-        for (let i = 3; i < 7; i++) {
-            if (dropeitems[i].childNodes.length) {
-                if (dropeitems[i].childNodes[0].getAttribute('data-number') === dropeitems[i].getAttribute('data-number')) {
-                    winVar++
-                }
-            }
-        }
-
-        if (dropeitems[8].childNodes.length) {
-            if (dropeitems[8].childNodes[0].getAttribute('data-number') === dropeitems[8].getAttribute('data-number')) {
-                winVar++
-            }
-        }
-
-
-        if (winVar === 7) {
+        if (winVar === 8) {
             chek_answerTxt.innerHTML = '<span>&#128077;</span> Молодец!'
             checkTask.style.background = 'lightgreen'
         } else {
