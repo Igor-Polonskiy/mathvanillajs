@@ -50,8 +50,16 @@ body {
     box-shadow: -5px -5px 15px #b8b7b7, 5px 5px 15px #99999b;
 }
 
-.answer_active {
-    border: 8px solid #6aa84f
+.task1_answer_active {
+    border: 8px solid blue
+}
+
+.task1_green {
+    border: 8px solid green;
+}
+
+.task1_red {
+    border: 8px solid red;
 }
 
 .task1_checkTask {

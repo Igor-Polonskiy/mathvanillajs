@@ -27,10 +27,15 @@
     answers.addEventListener('click', (e) => {
         if (e.target.classList.contains('task1_answer')) {
             answersItems.forEach(item => {
-                item.classList.remove('answer_active')
+                if (finishAnswer) {
+                    finishAnswer.classList.remove('task11_answer_active')
+                    finishAnswer.classList.remove('task11_green')
+                    finishAnswer.classList.remove('task11_red')
+                }
+                item.classList.remove('task1_answer_active')
             })
-            e.target.classList.add('answer_active')
-            finishAnswer = e.target.innerText
+            e.target.classList.add('task1_answer_active')
+            finishAnswer = e.target
             chek_answerTxt.innerHTML = ''
             checkTask.style.background = ''
             console.log(finishAnswer)
@@ -46,10 +51,15 @@
     })
 
     checkingTaskBtn.addEventListener('click', () => {
-        if (finishAnswer === winVarTask1) {
+        finishAnswer.classList.remove('task1_answer_active')
+        if (finishAnswer.innerText === winVarTask1) {
+            finishAnswer.classList.add('task11_green')
             chek_answerTxt.innerHTML = '<span>&#128077;</span> Молодец!'
             checkTask.style.background = 'lightgreen'
         } else {
+            if (finishAnswer) {
+                finishAnswer.classList.add('task11_red')
+            }
             chek_answerTxt.innerHTML = '<span>&#10060;</span> Попробуй еще!'
             checkTask.style.background = 'lightpink'
         }

@@ -58,7 +58,15 @@
 }
 
 .task11_answer_active {
-    border: 8px solid blue
+    border: 8px solid blue;
+}
+
+.task11_green {
+    border: 8px solid green;
+}
+
+.task11_red {
+    border: 8px solid red;
 }
 
 .task11_checkTask {

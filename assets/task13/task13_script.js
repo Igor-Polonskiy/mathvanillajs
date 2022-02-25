@@ -1,64 +1,91 @@
 (() => {
-    const reloadTaskBtn = document.querySelector('.task7_reloadTask')
-    const checkingTaskBtn = document.querySelector('.task7_checkingTask')
-    const checkTask = document.querySelector('.task7_checkTask')
-    const chek_answerTxt = document.querySelector('.task7_chek_answer')
-    const picturesWrapper = document.querySelector('.task7_imgWrapper')
-    const answersWrapper = document.querySelector('.task7_answers')
-    const task7 = document.querySelector('.task7_wrapper')
+    const reloadTaskBtn = document.querySelector('.task13_reloadTask')
+    const checkingTaskBtn = document.querySelector('.task13_checkingTask')
+    const checkTask = document.querySelector('.task13_checkTask')
+    const chek_answerTxt = document.querySelector('.task13_chek_answer')
+    const dropZone = document.querySelector('.task13_drop')
+    const answersWrapper = document.querySelector('.task13_answers')
+    const task12 = document.querySelector('.task13_wrapper')
 
-    const pictures = [{
+    const dropitems = [{
             id: 1,
-            src: './assets/task7/img/task7_1.png',
-            data: 10
+            data: '1'
         },
         {
             id: 2,
-            src: './assets/task7/img/task7_2.png',
-            data: 8
+            data: '2'
         },
         {
             id: 3,
-            src: './assets/task7/img/task7_3.png',
-            data: 7
+            data: '3'
         },
         {
             id: 4,
-            src: './assets/task7/img/task7_4.png',
-            data: 8
+            data: '4'
+        },
+        {
+            id: 5,
+            data: '5'
+        },
+        {
+            id: 6,
+            data: '6'
+        },
+        {
+            id: 7,
+            data: '7'
+        },
+        {
+            id: 8,
+            data: '8'
+        },
+        {
+            id: 9,
+            data: '9'
         }
     ]
 
     const answers = [{
             id: 1,
-            data: '10'
+            data: '1'
         },
         {
             id: 2,
-            data: '8'
+            data: '2'
         },
         {
             id: 3,
-            data: '8'
+            data: '4'
         },
         {
             id: 4,
+            data: '5'
+        },
+        {
+            id: 5,
+            data: '6'
+        },
+        {
+            id: 6,
             data: '7'
+        },
+        {
+            id: 7,
+            data: '9'
         }
     ]
 
-
-    pictures.forEach(item => {
-        let picture = document.createElement('div')
-        picture.classList.add('task7_imgWrapper_img')
-        picture.style.backgroundImage = `url(${item.src})`
-        picture.setAttribute('data-number', item.data)
-        picturesWrapper.append(picture)
+    dropitems.forEach(item => {
+        let el = document.createElement('div')
+        el.classList.add('task13_dropeitem')
+        el.setAttribute('data-number', item.data)
+        dropZone.append(el)
     })
+
 
     answers.sort(() => Math.random() - 0.5).forEach(item => {
         let answer = document.createElement('div')
-        answer.classList.add('task7_answer')
+        answer.classList.add('task13_answer')
         answer.innerText = item.data
         answer.setAttribute('data-number', item.data)
         answersWrapper.append(answer)
@@ -74,8 +101,9 @@
         draggingItem.style.top = pageY - shiftY + "px";
     }
 
-    task7.addEventListener('mousedown', (e) => {
-        if (e.target.classList.contains('task7_answer')) {
+    task12.addEventListener('mousedown', (e) => {
+
+        if (e.target.classList.contains('task13_answer')) {
             chek_answerTxt.innerHTML = ''
             checkTask.style.background = ''
 
@@ -101,15 +129,13 @@
     })
 
     document.addEventListener('mouseup', (e) => {
-
-
         if (draggingItem) {
             draggingItem.style.visibility = 'hidden';
             elemBelow = document.elementFromPoint(e.clientX, e.clientY);
             draggingItem.style.visibility = 'visible';
             draggingItem.style.cursor = "grab";
 
-            if (elemBelow.classList.contains("task7_imgWrapper_img") && elemBelow.childNodes.length === 0) {
+            if (elemBelow.classList.contains("task13_dropeitem") && elemBelow.childNodes.length === 0) {
                 draggingItem.style.position = "static";
                 draggingItem.style.zIndex = null;
                 draggingItem.style.top = null;
@@ -127,8 +153,11 @@
         }
     })
 
+    const dropeitems = document.querySelectorAll('.task13_dropeitem')
+
     reloadTaskBtn.addEventListener('click', () => {
-        picturesWrapper.childNodes.forEach(item => {
+
+        dropeitems.forEach(item => {
             if (item.childNodes.length) {
                 item.childNodes[0].remove()
             }
@@ -139,7 +168,7 @@
         }
         answers.sort(() => Math.random() - 0.5).forEach(item => {
             let answer = document.createElement('div')
-            answer.classList.add('task7_answer')
+            answer.classList.add('task13_answer')
             answer.innerText = item.data
             answer.setAttribute('data-number', item.data)
             answersWrapper.append(answer)
@@ -151,17 +180,31 @@
 
     checkingTaskBtn.addEventListener('click', () => {
         let winVar = 0
-        picturesWrapper.childNodes.forEach(item => {
-            if (item.childNodes.length) {
-                if (item.childNodes[0].getAttribute('data-number') === item.getAttribute('data-number')) {
+
+        for (let i = 0; i < 2; i++) {
+            if (dropeitems[i].childNodes.length) {
+                if (dropeitems[i].childNodes[0].getAttribute('data-number') === dropeitems[i].getAttribute('data-number')) {
                     winVar++
                 }
             }
-        })
+        }
+
+        for (let i = 3; i < 7; i++) {
+            if (dropeitems[i].childNodes.length) {
+                if (dropeitems[i].childNodes[0].getAttribute('data-number') === dropeitems[i].getAttribute('data-number')) {
+                    winVar++
+                }
+            }
+        }
+
+        if (dropeitems[8].childNodes.length) {
+            if (dropeitems[8].childNodes[0].getAttribute('data-number') === dropeitems[8].getAttribute('data-number')) {
+                winVar++
+            }
+        }
 
 
-
-        if (winVar === 4) {
+        if (winVar === 7) {
             chek_answerTxt.innerHTML = '<span>&#128077;</span> Молодец!'
             checkTask.style.background = 'lightgreen'
         } else {

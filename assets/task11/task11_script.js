@@ -93,7 +93,9 @@
         if (e.target.classList.contains('task11_answer')) {
             answersItems.forEach(item => {
                 if (finishAnswer) {
-                    finishAnswer.style.borderColor = 'grey'
+                    finishAnswer.classList.remove('task11_answer_active')
+                    finishAnswer.classList.remove('task11_green')
+                    finishAnswer.classList.remove('task11_red')
                 }
                 item.classList.remove('task11_answer_active')
             })
@@ -119,13 +121,29 @@
     })
 
     checkingTaskBtn.addEventListener('click', () => {
-        if (finishAnswer && finishAnswer.innerText === winVarTask1) {
-            finishAnswer.style.borderColor = 'green'
+        let winVar = 0
+
+        line1.childNodes.forEach((item, index) => {
+            if (item.classList.contains('task11_letter_active') && index >= 0 && index <= 7) {
+                winVar++
+            }
+        })
+
+        line2.childNodes.forEach((item, index) => {
+            if (item.classList.contains('task11_letter_active') && index >= 5 && index <= 9) {
+                winVar++
+            }
+        })
+
+        finishAnswer.classList.remove('task11_answer_active')
+        if (finishAnswer && finishAnswer.innerText === winVarTask1 && winVar === 13) {
+
+            finishAnswer.classList.add('task11_green')
             chek_answerTxt.innerHTML = '<span>&#128077;</span> Молодец!'
             checkTask.style.background = 'lightgreen'
         } else {
             if (finishAnswer) {
-                finishAnswer.style.borderColor = 'red'
+                finishAnswer.classList.add('task11_red')
             }
             chek_answerTxt.innerHTML = '<span>&#10060;</span> Попробуй еще!'
             checkTask.style.background = 'lightpink'

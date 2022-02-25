@@ -1,32 +1,37 @@
-.task7_wrapper {
+.task13_wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.task7_imgWrapper {
+.task13_imgWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.task13_imgWrapper img {
+    height: 300px;
+}
+
+.task13_drop {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.task7_imgWrapper_img {
-    width: 24%;
-    height: 250px;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
+.task13_dropeitem {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding: 10px;
-    box-sizing: border-box;
-    box-sizing: border-box;
-    box-shadow: -5px -5px 15px #ffffff, 5px 5px 10px #cbcdd3;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #cbcdd3;
     border-radius: 10px;
 }
 
-.task7_answers {
+.task13_answers {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
@@ -37,13 +42,13 @@
     border-radius: 10px;
 }
 
-.task7_answer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: grab;
+.task13_answer {
     box-sizing: border-box;
-    font-size: 25px;
+    font-size: 32px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px;
     width: 70px;
     height: 70px;
@@ -53,13 +58,13 @@
     box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #cbcdd3;
 }
 
-.task7_checkTask {
+.task13_checkTask {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-top: 20px;
 }
 
-.task7_chek_answer {
+.task13_chek_answer {
     font-size: 26px;
 }
