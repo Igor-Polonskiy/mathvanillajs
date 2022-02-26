@@ -52,6 +52,7 @@ body {
     width: 100%;
     box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #cbcdd3;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .task1_answer {
