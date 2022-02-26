@@ -103,7 +103,6 @@
             finishAnswer = e.target
             chek_answerTxt.innerHTML = ''
             checkTask.style.background = ''
-            console.log(finishAnswer)
 
         }
     })

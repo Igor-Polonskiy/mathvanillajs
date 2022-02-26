@@ -5,7 +5,7 @@
     const chek_answerTxt = document.querySelector('.task1_chek_answer')
     const dropZone = document.querySelector('.task1_drop')
     const answersWrapper = document.querySelector('.task1_answers')
-    const task12 = document.querySelector('.task1_wrapper')
+    const task1 = document.querySelector('.task1_wrapper')
 
     const dropitems = [{
             id: 1,
@@ -47,31 +47,54 @@
 
     const answers = [{
             id: 1,
-            data: '1'
+            data: 'blue',
+            src: './assets2/task1/img/blue.png'
         },
         {
             id: 2,
-            data: '2'
+            data: 'green',
+            src: './assets2/task1/img/green.png'
+
         },
         {
             id: 3,
-            data: '4'
+            data: 'yellow',
+            src: './assets2/task1/img/yellow.png'
+
         },
         {
             id: 4,
-            data: '5'
-        },
-        {
+            data: 'red',
+            src: './assets2/task1/img/red.png'
+
+        }, {
             id: 5,
-            data: '6'
+            data: 'blue',
+            src: './assets2/task1/img/blue.png'
         },
         {
             id: 6,
-            data: '7'
+            data: 'green',
+            src: './assets2/task1/img/green.png'
+
         },
         {
             id: 7,
-            data: '9'
+            data: 'green',
+            src: './assets2/task1/img/green.png'
+
+        },
+        {
+            id: 8,
+            data: 'red',
+            src: './assets2/task1/img/red.png'
+
+        },
+        {
+            id: 9,
+            data: 'yellow',
+            src: './assets2/task1/img/yellow.png'
+
         }
     ]
 
@@ -86,7 +109,7 @@
     answers.sort(() => Math.random() - 0.5).forEach(item => {
         let answer = document.createElement('div')
         answer.classList.add('task1_answer')
-        answer.innerText = item.data
+        answer.style.backgroundImage = `url(${item.src})`
         answer.setAttribute('data-number', item.data)
         answersWrapper.append(answer)
     })
@@ -101,7 +124,7 @@
         draggingItem.style.top = pageY - shiftY + "px";
     }
 
-    task12.addEventListener('mousedown', (e) => {
+    task1.addEventListener('mousedown', (e) => {
 
         if (e.target.classList.contains('task1_answer')) {
             chek_answerTxt.innerHTML = ''
@@ -169,7 +192,7 @@
         answers.sort(() => Math.random() - 0.5).forEach(item => {
             let answer = document.createElement('div')
             answer.classList.add('task1_answer')
-            answer.innerText = item.data
+            answer.style.backgroundImage = `url(${item.src})`
             answer.setAttribute('data-number', item.data)
             answersWrapper.append(answer)
         })
@@ -181,30 +204,15 @@
     checkingTaskBtn.addEventListener('click', () => {
         let winVar = 0
 
-        for (let i = 0; i < 2; i++) {
-            if (dropeitems[i].childNodes.length) {
-                if (dropeitems[i].childNodes[0].getAttribute('data-number') === dropeitems[i].getAttribute('data-number')) {
+        dropeitems.forEach(item => {
+            if (item.childNodes.length) {
+                if (item.childNodes[0].getAttribute('data-number') === item.getAttribute('data-number')) {
                     winVar++
                 }
             }
-        }
+        })
 
-        for (let i = 3; i < 7; i++) {
-            if (dropeitems[i].childNodes.length) {
-                if (dropeitems[i].childNodes[0].getAttribute('data-number') === dropeitems[i].getAttribute('data-number')) {
-                    winVar++
-                }
-            }
-        }
-
-        if (dropeitems[8].childNodes.length) {
-            if (dropeitems[8].childNodes[0].getAttribute('data-number') === dropeitems[8].getAttribute('data-number')) {
-                winVar++
-            }
-        }
-
-
-        if (winVar === 7) {
+        if (winVar === 9) {
             chek_answerTxt.innerHTML = '<span>&#128077;</span> Молодец!'
             checkTask.style.background = 'lightgreen'
         } else {

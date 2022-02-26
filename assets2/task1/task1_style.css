@@ -64,10 +64,9 @@ body {
     padding: 15px;
     width: 70px;
     height: 70px;
-    border-radius: 12px;
+    background-position: center;
+    background-size: cover;
     cursor: grab;
-    background-color: antiquewhite;
-    box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #cbcdd3;
 }
 
 .task1_checkTask {
