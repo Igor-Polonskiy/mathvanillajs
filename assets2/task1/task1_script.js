@@ -158,7 +158,7 @@
             draggingItem.style.visibility = 'visible';
             draggingItem.style.cursor = "grab";
 
-            if (elemBelow.classList.contains("task1_dropeitem") && elemBelow.childNodes.length === 0) {
+            if (elemBelow.classList.contains("task1_dropeitem") && elemBelow.children.length === 0) {
                 draggingItem.style.position = "static";
                 draggingItem.style.zIndex = null;
                 draggingItem.style.top = null;
@@ -181,8 +181,8 @@
     reloadTaskBtn.addEventListener('click', () => {
 
         dropeitems.forEach(item => {
-            if (item.childNodes.length) {
-                item.childNodes[0].remove()
+            if (item.children.length) {
+                item.children[0].remove()
             }
         })
 

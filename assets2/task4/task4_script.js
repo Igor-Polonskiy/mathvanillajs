@@ -69,10 +69,8 @@
 
     checkingTaskBtn.addEventListener('click', () => {
         let imgs = document.querySelectorAll('.task4_active')
-        console.log(imgs)
         let winVar = 0
         imgs.forEach(item => {
-            console.log(item.getAttribute('data-number'))
             if (item.getAttribute('data-number') === 'true') {
                 winVar++
             } else winVar--
