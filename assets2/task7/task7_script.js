@@ -1,49 +1,32 @@
 (() => {
-    const reloadTaskBtn = document.querySelector('.task5_reloadTask')
-    const checkingTaskBtn = document.querySelector('.task5_checkingTask')
-    const checkTask = document.querySelector('.task5_checkTask')
-    const chek_answerTxt = document.querySelector('.task5_chek_answer')
-    const dropZone = document.querySelector('.task5_drop')
-    const answersWrapper = document.querySelector('.task5_answers')
-    const task = document.querySelector('.task5_wrapper')
+    const reloadTaskBtn = document.querySelector('.task7_reloadTask')
+    const checkingTaskBtn = document.querySelector('.task7_checkingTask')
+    const checkTask = document.querySelector('.task7_checkTask')
+    const chek_answerTxt = document.querySelector('.task7_chek_answer')
+    const dropZone = document.querySelector('.task7_drop')
+    const answersWrapper = document.querySelector('.task7_answers')
+    const task = document.querySelector('.task7_wrapper')
 
     const answers = [{
             id: 1,
-            data: 'small',
-            src: './assets2/task5/img/task5_1.png',
-            target: false
+            src: './assets2/task7/img/task7_1.png',
+            target: true,
+            size: 'small'
         },
         {
             id: 2,
-            data: 'big',
-            src: './assets2/task5/img/task5_2.png',
-            target: false
+            src: './assets2/task7/img/task7_1.png',
+            target: false,
+            size: 'midle'
+
 
         },
         {
             id: 3,
-            data: 'midle',
-            src: './assets2/task5/img/task5_3.png',
-            target: true
+            src: './assets2/task7/img/task7_1.png',
+            target: true,
+            size: 'big'
 
-        },
-        {
-            id: 4,
-            data: 'small',
-            src: './assets2/task5/img/task5_4.png',
-            target: false
-
-        }, {
-            id: 5,
-            data: 'midle',
-            src: './assets2/task5/img/task5_5.png',
-            target: false
-        },
-        {
-            id: 6,
-            data: 'big',
-            src: './assets2/task5/img/task5_6.png',
-            target: false
 
         }
     ]
@@ -51,19 +34,18 @@
     function fillAnswerField() {
         answers.sort(() => Math.random() - 0.5).forEach(item => {
             let answer = document.createElement('div')
-            answer.classList.add('task5_answer')
+            answer.classList.add('task7_answer')
             answer.style.backgroundImage = `url(${item.src})`
             answer.setAttribute('data-number', item.data)
             answer.setAttribute('data-target', item.target)
-            if (item.data === 'small') {
+            if (item.size === 'small') {
                 answer.style.width = '50px'
                 answer.style.height = '50px'
             }
-            if (item.data === 'big') {
-                answer.style.width = '100px'
+            if (item.size === 'big') {
+                answer.style.width = '90px'
                 answer.style.height = '90px'
             }
-
             answersWrapper.append(answer)
         })
     }
@@ -81,7 +63,7 @@
 
     task.addEventListener('mousedown', (e) => {
 
-        if (e.target.classList.contains('task5_answer')) {
+        if (e.target.classList.contains('task7_answer')) {
             chek_answerTxt.innerHTML = ''
             checkTask.style.background = ''
 
@@ -112,9 +94,9 @@
             elemBelow = document.elementFromPoint(e.clientX, e.clientY);
             draggingItem.style.visibility = 'visible';
             draggingItem.style.cursor = "grab";
-            elemBelow = elemBelow.closest(".task5_drop")
+            elemBelow = elemBelow.closest(".task7_drop")
 
-            if (elemBelow && elemBelow.classList.contains("task5_drop")) {
+            if (elemBelow && elemBelow.classList.contains("task7_drop")) {
                 draggingItem.style.position = "static";
                 draggingItem.style.zIndex = null;
                 draggingItem.style.top = null;
@@ -132,37 +114,27 @@
         }
     })
 
-    const dropeitems = document.querySelectorAll('.task5_drop')
 
     reloadTaskBtn.addEventListener('click', () => {
-
-        dropeitems.forEach(item => {
-            if (item.childNodes.length) {
-                let count = item.childNodes.length
-                for (let i = 0; i < count; i++) {
-                    item.childNodes[item.childNodes.length - 1].remove()
-                }
-            }
-        })
-
-        for (let i = (answersWrapper.childNodes.length - 1); i > 0; i--) {
-            answersWrapper.childNodes[i].remove()
-        }
+        dropZone.innerHTML = ''
+        answersWrapper.innerHTML = ''
         fillAnswerField()
-
         chek_answerTxt.innerHTML = ''
         checkTask.style.background = ''
     })
 
     checkingTaskBtn.addEventListener('click', () => {
         let winVar = 0
-        if (dropZone.children.length === 1) {
-            if (dropZone.children[0].getAttribute('data-target') === 'true') {
-                winVar++
-            }
+        if (dropZone.children.length) {
+
+            [...dropZone.children].forEach(item => {
+                if (item.getAttribute('data-target') === 'true') {
+                    winVar++
+                } else winVar--
+            })
         }
 
-        if (winVar === 1) {
+        if (winVar === 2) {
             chek_answerTxt.innerHTML = '<span>&#128077;</span> Молодец!'
             checkTask.style.background = 'lightgreen'
         } else {

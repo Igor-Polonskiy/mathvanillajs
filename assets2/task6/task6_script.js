@@ -134,10 +134,10 @@
 
     checkingTaskBtn.addEventListener('click', () => {
         let winVar = 0
-        console.log(dropZone.children[0])
-        if (dropZone.children) {
+        console.log(dropZone.children)
+        if (dropZone.children.length) {
 
-            dropZone.children.forEach(item => { //???????
+            [...dropZone.children].forEach(item => { //???????
                 if (item.getAttribute('data-target') === 'true') {
                     winVar++
                 } else winVar--
