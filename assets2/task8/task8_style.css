@@ -1,0 +1,43 @@
+.task8_circleWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.chear:hover {
+    cursor: pointer;
+}
+
+.task8_pencils {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.task8_pencil {
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.task8_pencil:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s;
+}
+
+.task8_pencilSelect {
+    transform: scale(1.2);
+}
+
+.task8_pencilImg {
+    height: 100%;
+}
+
+.task8_checkTask {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task8_chek_answer {
+    font-size: 26px;
+}
