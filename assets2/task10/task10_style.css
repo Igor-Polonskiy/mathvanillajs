@@ -1,0 +1,66 @@
+.task10_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.task10_imgWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.task10_example img {
+    width: 70px;
+}
+
+.task10_drop {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #cbcdd3;
+    border-radius: 10px;
+    background-image: url('./img/task10_0.png');
+    background-size: 207px;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.task10_answers {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 210px;
+    width: 100%;
+    box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #cbcdd3;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.task10_answer {
+    background-size: contain;
+    background-position: center;
+    cursor: grab;
+}
+
+.task10_checkTask {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.task10_chek_answer {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+}
+
+.task10_chek_answer span {
+    font-size: 25px;
+}
