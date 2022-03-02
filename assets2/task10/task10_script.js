@@ -64,16 +64,7 @@
             answersWrapper.append(answer)
         })
     }
-    /*function fillAnswerField() {
-        answers.sort(() => Math.random() - 0.5).forEach(item => {
-            let answer = document.createElement('img')
-            answer.classList.add('task10_answer')
-            answer.setAttribute('src', item.src)
-            answer.style.height = item.height
 
-            answersWrapper.append(answer)
-        })
-    }*/
     fillAnswerField()
 
     let draggingItem;
@@ -104,7 +95,6 @@
     })
 
     document.addEventListener('mousemove', (e) => {
-        console.log('move')
         if (draggingItem) {
             moveAt(e.pageX, e.pageY);
 

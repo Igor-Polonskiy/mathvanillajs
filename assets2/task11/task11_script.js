@@ -95,7 +95,6 @@
     })
 
     document.addEventListener('mousemove', (e) => {
-        console.log('move')
         if (draggingItem) {
             moveAt(e.pageX, e.pageY);
 
