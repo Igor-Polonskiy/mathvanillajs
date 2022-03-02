@@ -10,27 +10,27 @@
     const answers = [{
             id: 1,
             src: './assets2/task11/img/task11_1.png',
-            height: '100px',
+            height: '50px',
             width: '100px'
         },
         {
             id: 2,
             src: './assets2/task11/img/task11_2.png',
-            height: '100px',
-            width: '100px'
+            height: '50px',
+            width: '50px'
 
         },
         {
             id: 3,
             src: './assets2/task11/img/task11_3.png',
             height: '50px',
-            width: '100px'
+            width: '75px'
         },
         {
             id: 4,
             src: './assets2/task11/img/task11_4.png',
-            height: '200px',
-            width: '100px'
+            height: '50px',
+            width: '50px'
         },
         {
             id: 5,
@@ -41,14 +41,14 @@
         {
             id: 6,
             src: './assets2/task11/img/task11_5.png',
-            height: '150px',
+            height: '100px',
             width: '50px'
         },
         {
             id: 7,
             src: './assets2/task11/img/task11_6.png',
-            height: '100px',
-            width: '200px'
+            height: '50px',
+            width: '100px'
 
 
         }
