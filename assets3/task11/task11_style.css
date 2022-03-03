@@ -1,0 +1,48 @@
+.task11_circleWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.task11_baloon:hover {
+    cursor: pointer;
+}
+
+.task11_pencils {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.task11_pencil {
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.task11_pencil:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s;
+}
+
+.task11_pencilSelect {
+    transform: scale(1.2);
+}
+
+.task11_pencilImg {
+    height: 100%;
+}
+
+.task11_checkTask {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task11_chek_answer {
+    font-size: 26px;
+}
+
+#task11_svg {
+    height: 300px;
+}

@@ -1,0 +1,48 @@
+.task12_circleWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.task12_baloon:hover {
+    cursor: pointer;
+}
+
+.task12_pencils {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.task12_pencil {
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.task12_pencil:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s;
+}
+
+.task12_pencilSelect {
+    transform: scale(1.2);
+}
+
+.task12_pencilImg {
+    height: 100%;
+}
+
+.task12_checkTask {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task12_chek_answer {
+    font-size: 26px;
+}
+
+#task12_svg {
+    height: 300px;
+}
