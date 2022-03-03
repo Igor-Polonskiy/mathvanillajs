@@ -1,0 +1,47 @@
+.task9_circleWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.task9_baloon:hover {
+    cursor: pointer;
+}
+
+.task9_pencils {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.task9_pencil {
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.task9_pencil:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s;
+}
+
+.task9_pencilSelect {
+    transform: scale(1.2);
+}
+
+.task9_pencilImg {
+    height: 100%;
+}
+
+.task9_checkTask {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task9_chek_answer {
+    font-size: 26px;
+}
+
+#task9_svg {
+    height: 300px;
+}
