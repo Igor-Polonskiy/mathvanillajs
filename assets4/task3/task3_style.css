@@ -1,0 +1,47 @@
+.task3_circleWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.task3_baloon:hover {
+    cursor: pointer;
+}
+
+.task3_pencils {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.task3_pencil {
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.task3_pencil:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s;
+}
+
+.task3_pencilSelect {
+    transform: scale(1.2);
+}
+
+.task3_pencilImg {
+    height: 100%;
+}
+
+.task3_checkTask {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task3_chek_answer {
+    font-size: 26px;
+}
+
+#task3_svg {
+    height: 300px;
+}
