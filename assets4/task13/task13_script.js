@@ -13,7 +13,6 @@
     let answer3 = ''
     let answer4 = ''
 
-
     input1.addEventListener('change', (e) => {
         answer1 = e.target.value.toLowerCase().trim()
     })
