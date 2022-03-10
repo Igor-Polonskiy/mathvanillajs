@@ -15,16 +15,16 @@
 
 
     input1.addEventListener('change', (e) => {
-        answer1 = e.target.value.toLowerCase()
+        answer1 = e.target.value.toLowerCase().trim()
     })
     input2.addEventListener('change', (e) => {
-        answer2 = e.target.value.toLowerCase()
+        answer2 = e.target.value.toLowerCase().trim()
     })
     input3.addEventListener('change', (e) => {
-        answer3 = e.target.value.toLowerCase()
+        answer3 = e.target.value.toLowerCase().trim()
     })
     input4.addEventListener('change', (e) => {
-        answer4 = e.target.value.toLowerCase()
+        answer4 = e.target.value.toLowerCase().trim()
     })
 
     reloadTaskBtn.addEventListener('click', () => {
