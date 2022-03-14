@@ -138,7 +138,6 @@
             }
         }
 
-
         if (winVar === 1) {
             chek_answerTxt.innerHTML = '<span>&#128077;</span> Молодец!'
             checkTask.style.background = 'lightgreen'

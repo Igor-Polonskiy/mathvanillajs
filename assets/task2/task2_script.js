@@ -9,6 +9,7 @@
     const task2_begin = document.querySelector('.task2_begin')
 
     let currentSlide = 1
+    let sound = false
 
     const pictures = [{
             id: 1,
@@ -82,10 +83,14 @@
         }
     ]
 
-    task2_begin.addEventListener('click', () => {
-        console.log(task2_begin)
+    task2_begin.addEventListener('click', (e) => {
+        if (e.target.classList.contains('task2_start1')) {
+            sound = true
+            audio[currentSlide - 1].play()
+        }
         task2_begin.style.display = 'none'
-        audio[currentSlide - 1].play()
+
+
     })
 
     count.innerText = currentSlide
@@ -100,9 +105,11 @@
     task2_prev.addEventListener('click', () => {
         if (currentSlide > 1) {
             currentSlide--
-            audio[currentSlide].pause()
-            audio[currentSlide].currentTime = 0
-            audio[currentSlide - 1].play()
+            if (sound) {
+                audio[currentSlide].pause()
+                audio[currentSlide].currentTime = 0
+                audio[currentSlide - 1].play()
+            }
             slide_caption.innerText = pictures[currentSlide - 1].text
             element.src = pictures[currentSlide - 1].src
             count.innerText = currentSlide
@@ -119,9 +126,11 @@
         if (currentSlide < pictures.length) {
             task2_prev.style.opacity = 1
             currentSlide++
-            audio[currentSlide - 2].pause()
-            audio[currentSlide - 2].currentTime = 0
-            audio[currentSlide - 1].play()
+            if (sound) {
+                audio[currentSlide - 2].pause()
+                audio[currentSlide - 2].currentTime = 0
+                audio[currentSlide - 1].play()
+            }
             slide_caption.innerText = pictures[currentSlide - 1].text
             element.src = pictures[currentSlide - 1].src
             count.innerText = currentSlide

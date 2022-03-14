@@ -17,8 +17,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+}
+
+.task2_begin button {
     cursor: pointer;
+    font-size: 40px;
 }
 
 .task2_sliderWrapper {
