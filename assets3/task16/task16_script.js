@@ -5,7 +5,7 @@
     const checkTask = document.querySelector('.task16_checkTask')
     const chek_answerTxt = document.querySelector('.task16_chek_answer')
 
-    const winVarTask16 = '3'
+    const winVarTask16 = '1'
 
     let answersItems = null
     let finishAnswer = null
