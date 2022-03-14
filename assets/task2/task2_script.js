@@ -87,8 +87,11 @@
         if (e.target.classList.contains('task2_start1')) {
             sound = true
             audio[currentSlide - 1].play()
+            task2_begin.style.display = 'none'
+        } else if (e.target.classList.contains('task2_start2')) {
+            task2_begin.style.display = 'none'
         }
-        task2_begin.style.display = 'none'
+
 
 
     })
