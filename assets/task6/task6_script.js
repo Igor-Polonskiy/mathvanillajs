@@ -41,7 +41,7 @@
     checkingTaskBtn.addEventListener('click', () => {
         let winVar = 0
 
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 5; i++) {
             if (chears[i].getAttribute('fill') === 'white') {
                 winVar++
             }

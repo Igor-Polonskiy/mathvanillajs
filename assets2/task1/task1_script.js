@@ -48,52 +48,103 @@
     const answers = [{
             id: 1,
             data: 'blue',
-            src: './assets2/task1/img/blue.png'
+            src: './assets2/task1/img/blueball.png'
         },
         {
             id: 2,
             data: 'green',
-            src: './assets2/task1/img/green.png'
+            src: './assets2/task1/img/greenball.png'
 
         },
         {
             id: 3,
             data: 'yellow',
-            src: './assets2/task1/img/yellow.png'
+            src: './assets2/task1/img/yellowball.png'
 
         },
         {
             id: 4,
             data: 'red',
-            src: './assets2/task1/img/red.png'
+            src: './assets2/task1/img/redball.png'
 
         }, {
             id: 5,
             data: 'blue',
-            src: './assets2/task1/img/blue.png'
+            src: './assets2/task1/img/blueball.png'
         },
         {
             id: 6,
             data: 'green',
-            src: './assets2/task1/img/green.png'
+            src: './assets2/task1/img/greenball.png'
 
         },
         {
             id: 7,
             data: 'green',
-            src: './assets2/task1/img/green.png'
+            src: './assets2/task1/img/greenball.png'
 
         },
         {
             id: 8,
             data: 'red',
-            src: './assets2/task1/img/red.png'
+            src: './assets2/task1/img/redball.png'
 
         },
         {
             id: 9,
             data: 'yellow',
-            src: './assets2/task1/img/yellow.png'
+            src: './assets2/task1/img/yellowball.png'
+
+        },
+        {
+            id: 10,
+            data: 'blue',
+            src: './assets2/task1/img/blueball.png'
+        },
+        {
+            id: 11,
+            data: 'green',
+            src: './assets2/task1/img/greenball.png'
+
+        },
+        {
+            id: 12,
+            data: 'yellow',
+            src: './assets2/task1/img/yellowball.png'
+
+        },
+        {
+            id: 13,
+            data: 'red',
+            src: './assets2/task1/img/redball.png'
+
+        }, {
+            id: 14,
+            data: 'blue',
+            src: './assets2/task1/img/blueball.png'
+        },
+        {
+            id: 15,
+            data: 'green',
+            src: './assets2/task1/img/greenball.png'
+
+        },
+        {
+            id: 16,
+            data: 'yellow',
+            src: './assets2/task1/img/yellowball.png'
+
+        },
+        {
+            id: 17,
+            data: 'red',
+            src: './assets2/task1/img/redball.png'
+
+        },
+        {
+            id: 18,
+            data: 'yellow',
+            src: './assets2/task1/img/yellowball.png'
 
         }
     ]

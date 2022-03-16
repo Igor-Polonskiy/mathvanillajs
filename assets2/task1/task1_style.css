@@ -46,9 +46,10 @@ body {
 .task1_answers {
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 100px;
+    flex-wrap: wrap;
+    height: 200px;
     width: 100%;
     box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #cbcdd3;
     border-radius: 10px;
@@ -57,17 +58,16 @@ body {
 
 .task1_answer {
     box-sizing: border-box;
-    font-size: 32px;
-    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
     width: 70px;
     height: 70px;
+    border-radius: 50%;
     background-position: center;
     background-size: cover;
     cursor: grab;
+    margin: 10px;
 }
 
 .task1_checkTask {
