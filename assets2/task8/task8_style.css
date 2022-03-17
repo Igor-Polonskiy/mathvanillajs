@@ -41,3 +41,20 @@
 .task8_chek_answer {
     font-size: 26px;
 }
+
+.task1Btn {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #e9ecf4;
+    border: none;
+    border-radius: 12px;
+    background-color: #0AB7D3;
+    padding: 10px;
+    font-size: 26px;
+    color: white;
+    min-width: 100px;
+}
+
+.task1Btn:hover {
+    box-shadow: -5px -5px 15px #b8b7b7, 5px 5px 15px #99999b;
+}
