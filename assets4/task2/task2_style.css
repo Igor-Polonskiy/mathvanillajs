@@ -53,3 +53,7 @@
 .task2_chek_answer span {
     font-size: 25px;
 }
+
+.task2_audio {
+    display: none !important;
+}

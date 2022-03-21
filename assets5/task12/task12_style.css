@@ -1,0 +1,78 @@
+.task12_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 750px;
+}
+
+.task12_begin {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task12_begin button {
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.task12_sliderWrapper {
+    width: 100%;
+}
+
+.task12_counting {
+    font-size: 22px;
+    text-align: center;
+}
+
+.task12_slider {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center
+}
+
+.task12_slide {
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.task12_img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.task12_img img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.task12_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.task12_btn:hover {
+    transform: scale(1.1);
+}
+
+.task12_slide_caption {
+    font-size: 22px;
+    max-width: 80%;
+    text-align: center;
+}
+
+.task12_audio {
+    display: none !important;
+}

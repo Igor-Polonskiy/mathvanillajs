@@ -107,9 +107,7 @@
             }
         })
 
-        for (let i = (answersWrapper.childNodes.length - 1); i > 0; i--) {
-            answersWrapper.childNodes[i].remove()
-        }
+        answersWrapper.innerHTML = ''
         setAnswers()
 
         chek_answerTxt.innerHTML = ''
